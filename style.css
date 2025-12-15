@@ -1,0 +1,388 @@
+/* ---------- Global Styles ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  color: #333;
+  background-color: #fef9fb;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-image: url('artist-bg.jpg'); /* or use the exact filename */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* keeps it fixed while scrolling */
+  width: 100vw ;
+  height: 100vh;
+
+}
+/* ---------- Navbar ---------- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ee9ca7;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #1f1f1f;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ee9ca7;
+}
+
+/* ---------- Dropdown Menu ---------- */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.9);
+  min-width: 150px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  top: 40px;
+  border-radius: 10px;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  color: #333;
+}
+
+.dropdown-content a:hover {
+  background-color: #fad0c4;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* ---------- Icons ---------- */
+.icons img {
+  width: 25px;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+/* ---------- Hero Section ---------- */
+.hero {
+  text-align: center;
+  margin-top: 180px;
+  color: white;
+}
+
+.hero h4 {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin: 20px 0;
+  color: #fff;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+}
+
+.shop-btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+  border-radius: 30px;
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.shop-btn:hover {
+  background: linear-gradient(135deg, #ee9ca7, #ffdde1);
+  transform: scale(1.05);
+}
+
+/* ---------- Features ---------- */
+.features {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 100px auto;
+  max-width: 1000px;
+  text-align: center;
+  color: #333;
+}
+
+.feature {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 30px;
+  border-radius: 20px;
+  width: 200px;
+  margin: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: all 0.3s;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+  background: linear-gradient(135deg, #c2e9fb, #fef9fb);
+}
+
+/* ---------- Footer ---------- */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.4);
+  color: #444;
+  font-size: 0.9rem;
+  backdrop-filter: blur(6px);
+}
+
+/* Product Gallery Section */
+.art-gallery {
+  text-align: center;
+  padding: 60px 5%;
+  background-color: #fdfcff;
+}
+
+.art-gallery h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.art-gallery p {
+  color: #666;
+  margin-bottom: 40px;
+  font-size: 1rem;
+}
+
+/* Product Grid Layout */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+/* Product Cards */
+.product-card {
+  background-color: #ffffff;
+  border-radius: 70px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  width: 300px;
+  padding-bottom: 0px;
+  height: 500px;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+}
+
+.product-card img {
+  width: 100%;
+  height: 50%;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.product-card h3 {
+  color: #333;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.product-card .artist {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.product-card .price {
+  color: #4da6ff;
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+.product-card .hours {
+  color: #888;
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+}
+
+.add-btn {
+  background: linear-gradient(0deg, #dfbbdc,#dfbbdc);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.add-btn:hover {
+  background: linear-gradient(0deg, #c3ecf5,#c3ecf5);
+}
+
+/* ---------- Icons and Search ---------- */
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Search bar styling */
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255,255,255,0.8);
+  border-radius: 25px;
+  padding: 5px 15px;
+  height: 40px;   
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);      /* Increased height */
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1rem;
+  width: 200px;         /* Increase width here */
+}
+
+.search-icon {
+  color: #555;
+  margin-right: 10px;
+  font-size: 24px;
+}
+
+/* Material Icons styling */
+.material-symbols-outlined {
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.material-symbols-outlined:hover {
+  color: #ee9ca7;
+}
+/* ---------- About Us Section ---------- */
+.about-section {
+  background-color: #fff6f9;
+  padding: 80px 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  align-items: center;
+  max-width: 1200px;
+}
+
+.about-image {
+  flex: 1 1 45%;
+  text-align: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.about-content {
+  flex: 1 1 50%;
+}
+
+.about-content h2 {
+  font-size: 2.5rem;
+  color: #e85a70;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.about-content p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.about-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 28px;
+  background-color: #e85a70;
+  color: #fff;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.about-btn:hover {
+  background-color: #d94d62;
+  transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-content h2 {
+    font-size: 2rem;
+  }
+
+  .about-content p {
+    font-size: 0.95rem;
+  }
+
+  .about-btn {
+    padding: 10px 24px;
+  }
+}
+
